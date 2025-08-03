@@ -65,13 +65,13 @@ function afterload()
 
     async function init() {
 
-        let res = await fetch('/shader/background.vert')
+        let res = await fetch('/xaswebsite2025/shader/background.vert')
         if(!res.ok)
             throw new Error(`Response Status: ${res.status}`);
 
         const vertSource = await res.text();
 
-        res = await fetch('/shader/background.frag')
+        res = await fetch('/xaswebsite2025/shader/background.frag')
         if(!res.ok)
             throw new Error(`Response Status: ${res.status}`);
 
