@@ -1,4 +1,4 @@
-@import url('/stylesheets/common.css');
+@import url('common.css');
 
 html {
     font-optical-sizing: auto;
@@ -108,7 +108,7 @@ footer {
 }
 
 .hero-back {
-    background: url(/images/background-events.jpeg);
+    background: url(/xaswebsite2025/images/background-events.jpeg);
     background-size: 100% auto;
     background-position: -50%;
 }
