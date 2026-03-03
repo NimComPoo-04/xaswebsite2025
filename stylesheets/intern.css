@@ -28,7 +28,7 @@ body {
 }
 
 header {
-    margin-top: auto;
+    margin-top: 10rem;
     padding: 0 10% 60px;
 }
 
@@ -41,9 +41,11 @@ header h1 {
 
 header p {
     font-family: 'Latin Modern', sans-serif;
-    color: rgba(255,255,255,0.7);
-    max-width: 800px;
+    font-size: 1.1rem;
     line-height: 1.6;
+    margin-top: 10px;
+    color: white;
+    max-width: 800px;
 }
 
 .boddery {
@@ -140,8 +142,8 @@ header p {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(to bottom, 
-                rgba(5, 4, 14, 0.5) 0%, 
-                transparent 50%, 
+                transparent 0%, 
+                rgba(5, 4, 14, 0.3) 70%, 
                 rgba(5, 4, 14, 1) 100%);
     z-index: 2; /* Sits between the image and the text */
 }
@@ -158,4 +160,141 @@ footer {
     text-align: center;
     color: white;
     border-top: 1px solid #1a1033;
+}
+
+@media (max-width: 800px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navigation-container {
+        z-index: 100;
+        padding-left: 15px;
+    }
+
+    .hamburger {
+        display: inline-flex;
+        z-index: 101;
+    }
+
+    .mobile-menu {
+        z-index: 102;
+    }
+
+    header {
+        z-index: 2;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu-toggle:checked ~ .mobile-menu {
+        display: block;
+    }
+
+    .hero-back {
+        min-height: 50vh;
+    }
+
+    /* This creates the dark vignette over the moving image */
+    .hero-back::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to bottom, 
+                    transparent 0%, 
+                    rgba(5, 4, 14, 0.3) 90%, 
+                    rgba(5, 4, 14, 1) 100%);
+        z-index: 2; /* Sits between the image and the text */
+    }
+
+    header {
+        margin-top: 6rem;
+        padding: 0 6% 40px;
+    }
+
+    header h1 {
+        font-size: 3.2rem;
+    }
+
+    header p {
+        font-size: 1.05rem;
+    }
+
+    .boddery {
+        padding: 60px 6%;
+    }
+
+    .heading-1, .heading-2 {
+        font-size: 1.6rem;
+        margin: 40px 0 20px;
+    }
+
+    .papers {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .paper-heading {
+        font-size: 1.3rem;
+    }
+
+    .paper-abstract {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        margin-top: 5rem;
+    }
+
+    header h1 {
+        font-size: 2.6rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .boddery {
+        padding: 50px 5%;
+    }
+
+    .heading-1, .heading-2 {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .papers {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    .paper-heading {
+        font-size: 1.2rem;
+    }
+
+    .paper-abstract {
+        font-size: 0.95rem;
+        margin-bottom: 16px;
+    }
+
+    .source-link {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+    }
 }

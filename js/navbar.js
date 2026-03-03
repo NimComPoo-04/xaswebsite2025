@@ -25,6 +25,7 @@ class Navbar extends HTMLElement {
                     <li>FELO</li>
                 </ul>
                 <div class="mobile-menu">
+                    <a href="about.html">About Us</a>
                     <a href="events.html">Events</a>
                     <a href="research.html">Research</a>
                     <a href="intern.html">Internship Resources</a>
