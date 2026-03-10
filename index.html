@@ -1,75 +1,71 @@
 <!doctype html>
 <html>
-
-<head>
-	<title>Xaverian Astronomical Society</title>
-	<script src='js/navbar.js'></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="stylesheets/index.css">
-	<style>
-		body {
-			height: 100%;
-			margin: 0;
-			overflow-x: hidden;
-			background: radial-gradient(ellipse at top,
-					#05040e 0%,
-					#0a0618 25%,
-					#0f081f 50%,
-					#140a2a 70%,
-					#1a1033 85%,
+	<head>
+		<title>Xaverian Astronomical Society</title>
+        <script src='js/navbar.js'></script>
+		
+		<link rel="stylesheet" href="stylesheets/index.css">
+		<style>
+			body {
+				height: 100%;
+				margin: 0;
+				overflow-x: hidden;
+				background: radial-gradient(ellipse at top,
+					#05040e 0%, 
+					#0a0618 25%, 
+					#0f081f 50%,  
+					#140a2a 70%, 
+					#1a1033 85%, 
 					#2e1c50 100%);
-			background-attachment: fixed;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-
-		canvas {
-			position: absolute;
-			display: block;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			z-index: 0;
-			pointer-events: none;
-		}
-
-		#background-img {
-			display: none;
-		}
-	</style>
-</head>
-
-<body>
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			canvas {
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				z-index: 0;
+				pointer-events: none;
+			}
+			#background-img {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<xas-loader></xas-loader>
 	<main>
-        <xas-loader></xas-loader>
-
 		<canvas id="can"></canvas>
 
-		<xas-navbar></xas-navbar>
+        <xas-navbar></xas-navbar>
 
 		<h1 class="xas-wrapper">
-			<div class="xas-container">
-				<span class="xas-text">XAS</span>
-				<span class="xas-phrase">Prudentia Ultra Noctifer</span>
+    <div class="xas-container">
+        <span class="xas-text">XAS</span>
+        <span class="xas-phrase">Prudentia Ultra Noctifer</span>
+        
+        <span class="xas-full">
+            <span>Xaverian</span>
+            <span>Astronomical</span>
+            <span>Society</span>
+        </span>
+    </div>
+</h1>
+<h2 class="event-heading">Upcoming Events</h2>
 
-				<span class="xas-full">
-					<span>Xaverian</span>
-					<span>Astronomical</span>
-					<span>Society</span>
-				</span>
-			</div>
-		</h1>
-
-		<h2 class="event-heading">Upcoming Events</h2>
-
-		<div class="event-container">
-			<div class="card item-1" onclick="redirect()">
-				<img src="images/galaxy.jpg" alt="Event 1">
-				<h3><a style="color: inherit;" href="registration.html">Event Name 1</a></h3>
-				<h4>Event Date and Time</h4>
-				<p>Details about the first event. This event is very cool, idk what else to write here lol</p>
-			</div>
-		</div>
+<a href="/registration.html" class="event-link">
+    <div class="card">
+        <img src="images/astro26.jpeg" alt="Event Poster">
+        <div class="card-content">
+            <h3>ASTROVAGANZA 2026</h3>
+            <h4>30th March, 2026 : Room 15</h4>
+            <div class="registration-cta">Click Here to Register</div>
+        </div>
+    </div>
+</a>
 
 		<h2 class="gallery-heading">Gallery</h2>
 
@@ -111,24 +107,19 @@
 				<img src="images/gal12.jpeg" alt="">
 			</div>
 		</div>
+
 	</main>
-	<footer>
-		<p>2025 Xaverian Astronomical Society.</p>
-	</footer>
+		<footer>
+			<p>2025 Xaverian Astronomical Society.</p>
+		</footer>
 
-	<img src="images/background.jpg" id="background-img" style='background: #6e35c9'>
-	<script src="js/background.js"></script>
-	<script src="js/gallery.js"></script>
+		<img src="images/background.jpg" id="background-img" style='background: #6e35c9'>
+		<script src="js/background.js"></script>
+		<script src="js/gallery.js"></script>
 
-	<div id="imageModal" class="modal">
-		<span class="close-modal">&times;</span>
-		<img class="modal-content" id="expandedImg">
-	</div>
-	<script>
-		function redirect(to) {
-			window.location.href = "registration.html";
-		}
-	</script>
-</body>
-
+		<div id="imageModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="expandedImg">
+		</div>
+	</body>
 </html>
