@@ -123,7 +123,7 @@ main {
     position: relative;
     display: grid;
     grid-template-areas: "stack"; 
-    height: 420px; 
+    height: 472px; 
     border-radius: 24px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);

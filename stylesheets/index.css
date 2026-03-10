@@ -138,6 +138,7 @@ img#gallery {
   z-index: 1;               
   color: white;         
   text-align: center;
+  margin-top: 150px;
   margin-bottom: 0;       
   font-size: 40px;
 }
@@ -176,16 +177,15 @@ h2.event-heading {
   z-index: 1;            
   color: white;             
   text-align: center;
-  margin-top: 150px; 
-  margin-bottom: 100px;        
+  /* margin-top: 150px;  */
+  margin-bottom: 70px;        
   font-size: 40px;
 }
 
 .event-container {
   width: 75vw;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   justify-content: center;
 }
 
@@ -197,7 +197,7 @@ h2.event-heading {
 }
 
 .card {
-  margin: 15px;
+  width: 33.5%;
   background-color: black;
   color: white;
   border: 1px solid white;
@@ -226,6 +226,7 @@ h2.event-heading {
   transform: translateY(-10px) translateZ(5px) scale(1.02);
   transition: 0.4s ease-in-out;
   box-shadow: 0 20px 30px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 footer {
