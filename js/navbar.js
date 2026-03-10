@@ -1,4 +1,3 @@
-
 class Navbar extends HTMLElement {
     constructor() {
         super();
@@ -31,12 +30,69 @@ class Navbar extends HTMLElement {
                     <a href="#">FELO</a>
                 </div>
             </nav>`;
-
-        //this.classList.add('')
     }
 }
 
 customElements.define('xas-navbar', Navbar);
 
-window.onload = () =>
-console.log(document.querySelector('xas-navbar'))
+// -----------------------------------
+
+function hideLoader() {
+    function temp() {
+        document.querySelector('#universe').addEventListener('transitionend', () => {
+            document.querySelector('#universe').remove();
+        })
+        document.querySelector('#universe').style.opacity = "0";
+    }
+
+    // FIXME: change 1000 to 0 if not needed the seconds loadtime
+    setTimeout(temp, 1000);
+}
+
+class Loader extends HTMLElement {
+    constructor() {
+        super();
+    }
+    connectedCallback() {
+        this.innerHTML = `
+		<!-- Loader -->
+		<div class='loader'>
+			<!--stylesheet-->
+			<link rel="stylesheet" href="stylesheets/loader.css">
+
+			<!-- Loader -->
+			<div id='universe' class='is-preload'>
+				<div id='galaxy'>
+					<div class='circle'></div>
+					<div class='circle2'></div>
+					<div class='circle3'></div>
+					<div id='orbit0'>
+						<div id='pos0'>
+							<div id='dot0'></div>
+						</div>
+					</div>
+					<div id='orbit1'>
+						<div id='pos1'>
+							<div id='dot1'></div>
+						</div>
+					</div>
+					<div id='orbit2'>
+						<div id='pos2'>
+							<div id='dot2'></div>
+						</div>
+					</div>
+					<div id='orbit3'>
+						<div id='pos3'>
+							<div id='dot3'></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        `;
+    }
+}
+
+customElements.define('xas-loader', Loader);
+
+window.addEventListener('load', hideLoader);
