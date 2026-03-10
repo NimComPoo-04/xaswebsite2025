@@ -260,8 +260,70 @@ footer {
 }
 
 @media (max-width: 800px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navigation-container {
+        z-index: 100;
+        padding-left: 15px;
+    }
+
+    .hamburger {
+        display: inline-flex;
+        z-index: 101;
+    }
+
+    .mobile-menu {
+        z-index: 102;
+    }
+
+    header {
+        z-index: 2;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu-toggle:checked ~ .mobile-menu {
+        display: block;
+    }
+
     .hero-back {
         min-height: 50vh;
+    }
+
+    .hamburger {
+        display: inline-flex;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu-toggle:checked ~ .mobile-menu {
+        display: block;
     }
 
     header {
@@ -305,6 +367,8 @@ footer {
 
     .core-grid {
         gap: 28px;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .core-grid .member-card {
@@ -320,6 +384,18 @@ footer {
 
     .role {
         font-size: 0.95rem;
+    }
+
+    /* This creates the dark vignette over the moving image */
+    .hero-back::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(to bottom, 
+                    transparent 0%, 
+                    rgba(5, 4, 14, 0.3) 90%, 
+                    rgba(5, 4, 14, 1) 100%);
+        z-index: 2; /* Sits between the image and the text */
     }
 }
 
@@ -349,5 +425,15 @@ footer {
     .member-card.prominent .photo-wrap {
         width: 200px;
         height: 200px;
+    }
+
+    .core-grid {
+        gap: 20px;
+    }
+
+    .core-grid .member-card {
+        width: 100%;
+        padding: 24px 18px;
+        border-radius: 20px;
     }
 }
