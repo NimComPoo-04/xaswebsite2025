@@ -261,7 +261,7 @@ footer {
 
 @media (max-width: 800px) {
     .hero-back {
-        min-height: 50vh;
+        /*min-height: 50vh;*/
     }
 
     header {

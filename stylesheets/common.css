@@ -244,3 +244,35 @@ html {
         display: block;
     }
 }
+
+
+/* --- 1. HERO SECTION (Aligned like Internship) --- */
+.hero-back {
+    position: relative;
+    overflow: hidden;
+    /*min-height: 60vh;*/
+    
+    /* MUST BE FLEX TO PUSH TEXT DOWN */
+    display: flex; 
+    flex-direction: column;
+    
+    background: #05040e;
+}
+
+.hero-back::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    
+    /* Put your image here */
+    background: url('../images/sky.png');
+    background-size: cover;
+    background-position: center;
+    
+    /* The animation */
+    animation: slowZoom 20s ease-in-out infinite;
+    z-index: 1; /* Sits behind the content */
+}
