@@ -22,7 +22,7 @@ html {
 .hero-back {
     position: relative;
     overflow: hidden;
-    min-height: 60vh;
+    /*min-height: 60vh;*/
     
     /* MUST BE FLEX TO PUSH TEXT DOWN */
     display: flex; 
