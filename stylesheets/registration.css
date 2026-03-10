@@ -86,7 +86,7 @@ header h1 {
 header p {
     font-family: 'Latin Modern', sans-serif;
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: #A9A3ff;
     max-width: 800px;
     margin-top: 1.5rem; /* Ensure no top margin is fighting the auto-push */
 }

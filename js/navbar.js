@@ -21,7 +21,7 @@ class Navbar extends HTMLElement {
                             <a href='intern.html'><li>Internship Resources</li></a>
                         </ul>
                     </li>
-                    <li>FELO</li>
+                    <a href='felo.html'><li>FELO</li></a>
                 </ul>
                 <div class="mobile-menu">
                     <a href="events.html">Events</a>
