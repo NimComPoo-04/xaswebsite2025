@@ -32,8 +32,6 @@ a:hover {
   text-shadow: 0 0 5px #FF8888, 0 0 10px #FF8888, 0 0 15px #FF8888;
 }
 
-
-
 h1.xas-container {
   position: relative;
   z-index: 1;
@@ -105,11 +103,11 @@ img#gallery {
 /* --- NEW PHRASE STYLING --- */
 .xas-phrase {
     position: absolute;
-    bottom: -60px; /* Adjust this to move the phrase higher or lower */
+    bottom: -60px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px; /* Adjust size as needed */
-    font-family: 'Latin Modern', serif; /* Or your preferred secondary font */
+    font-size: 24px;
+    font-family: 'Latin Modern', serif;
     font-weight: normal;
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: 4px;
@@ -119,13 +117,11 @@ img#gallery {
     transition: opacity 1s ease;
 }
 
-/* Optional: Hide it or change its color when hovering over XAS */
 .xas-container:hover .xas-phrase {
     color: goldenrod;
     text-shadow: 0 0 8px rgba(218, 165, 32, 0.6);
 }
 
-/* Fix for mobile */
 @media (max-width: 800px) {
     .xas-phrase {
         font-size: 16px;
@@ -134,12 +130,12 @@ img#gallery {
 }
 
 .gallery-heading {
-  position: relative;        
-  z-index: 1;               
-  color: white;         
+  position: relative;
+  z-index: 1;
+  color: white;
   text-align: center;
   margin-top: 150px;
-  margin-bottom: 0;       
+  margin-bottom: 0;
   font-size: 40px;
 }
 
@@ -160,74 +156,118 @@ img#gallery {
   margin: auto;
   margin-top: 70px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .gallery img {
-  width: 21vw;
-  height: 30vh;
-  margin: 10px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
   border: 1px solid white;
-  
 }
 
 h2.event-heading {
-  position: relative; 
-  z-index: 1;            
-  color: white;             
+  position: relative;
+  z-index: 1;
+  color: white;
   text-align: center;
-  /* margin-top: 150px;  */
-  margin-bottom: 70px;        
+  margin-bottom: 70px;
   font-size: 40px;
 }
 
 .event-container {
-  width: 75vw;
+  width: 90vw;
   margin: auto;
   display: flex;
   justify-content: center;
+  align-items: stretch;
+  gap: 40px;
 }
 
-.card > img {
-  width: 25vw;
-  height: 230px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
+/* ===== UPDATED CARD SECTION ===== */
+
+/* ===== UPDATED CARD SECTION ===== */
 
 .card {
-  width: 33.5%;
+  width: 700px;
+  display: flex;
   background-color: black;
   color: white;
   border: 1px solid white;
   border-radius: 10px;
+  overflow: hidden;
 }
 
-.card > h3, h4, p {
-  padding: 15px;
-  text-align: justify;
+/* Poster */
+.card > img {
+  width: 45%;
+  object-fit: cover;
 }
 
-.card h3, .card h4, .card p {
-  margin: 3px 4px;
+/* Right side content */
+.card > h3,
+.card > h4,
+.card > p {
+  width: 55%;
+  padding-left: 40px;
 }
 
-.card h3 {
-  font-size: 30px;
+/* Proper vertical spacing */
+.card h3{
+  font-size: 36px;
+  margin-top: 60px;
+  margin-bottom: 15px;
 }
 
-.card h4 {
-  font-size: 15px;
+.card h4{
+  font-size: 16px;
   color: lightgray;
+  margin-bottom: 12px;
 }
 
+.card p{
+  font-size: 15px;
+  color: #d0d0d0;
+}
+
+/* Hover */
 .card:hover {
   transform: translateY(-10px) translateZ(5px) scale(1.02);
   transition: 0.4s ease-in-out;
   box-shadow: 0 20px 30px rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
+
+/* ===== MOBILE CARD (unchanged layout) ===== */
+
+@media (max-width: 800px) {
+
+  .card {
+    flex-direction: column;
+    margin: auto !important;
+    width: 80vw !important;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .gallery {
+  grid-template-columns: 1fr;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+}
+
+}
+
+/* ===== FOOTER ===== */
 
 footer {
   margin-top: 80px;
@@ -248,99 +288,18 @@ footer p {
   letter-spacing: 2px;
 }
 
-@media (max-width: 800px) {
-  body {
-    overflow-x: hidden;
-  }
+/* ===== LIGHTBOX ===== */
 
-  /*
-  .navigation, .hamburger {
-    display: none;
-  }
-  */
-
-  .navigation-container {
-    padding-left: 15px;
-  }
-
-  .xas-container {
-    width: 70vw;
-    margin: auto;
-    display: flex;
-    flex-direction: column !important;
-    align-items: center;
-    gap: 8px;
-    position: relative !important;
-  }
-
-  .xas-text {
-    transform: none !important;
-    transition: none !important;
-    text-shadow: 0 0 4px #FF8888, 0 0 4px #FF8888, 0 0 7px #FF8888;
-    position: static !important;
-  }
-
-  .xas-full {
-    font-size: 30px !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    align-items: center;
-  }
-
-  .xas-full {
-    transform: none !important;
-    transition: none !important;
-    text-shadow: 0 0 4px #FF8888, 0 0 4px #FF8888, 0 0 7px #FF8888;
-    position: static !important;
-  }
-
-  .xas-text {
-    font-size: 80px !important;
-  }
-
-  .gallery-heading {
-    margin-bottom: 90px !important;
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr);
-  }
-
-  .gallery img {
-    width: 83vw !important;
-    padding-left: 5px;
-  }
-
-  .event-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 30px;
-  }
-
-  .card {
-    margin: auto !important;
-    width: 80vw !important;
-  }
-
-  .card img {
-    width: 80vw !important;
-  }
-}
-
-/* --- LIGHTBOX MODAL --- */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 9999; /* On top of everything */
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(5, 4, 14, 0.9); /* Dark background */
-    backdrop-filter: blur(8px); /* Blurs the background content */
+    background-color: rgba(5, 4, 14, 0.9);
+    backdrop-filter: blur(8px);
     justify-content: center;
     align-items: center;
 }
@@ -353,7 +312,6 @@ footer p {
     animation: zoomIn 0.4s ease;
 }
 
-/* Close Button */
 .close-modal {
     position: absolute;
     top: 30px;
@@ -370,13 +328,11 @@ footer p {
     transform: scale(1.2);
 }
 
-/* Zoom Animation */
 @keyframes zoomIn {
     from { transform: scale(0.7); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Add a pointer cursor to gallery images to show they are clickable */
 .gallery img {
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -385,4 +341,18 @@ footer p {
 .gallery img:hover {
     transform: scale(1.05);
     border-color: #A9A3ff;
+}
+
+.event-link{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.event-link .card{
+    width: 100%;
+    max-width: 700px;
+    cursor: pointer;
 }
