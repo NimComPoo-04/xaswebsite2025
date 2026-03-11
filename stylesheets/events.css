@@ -86,9 +86,10 @@ header h1 {
 header p {
     font-family: 'Latin Modern', sans-serif;
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 800px;
-    margin-top: 1.5rem; /* Ensure no top margin is fighting the auto-push */
+    line-height: 1.6;
+    margin-top: 10px;
+    color: #A9A3ff;
+    max-width: 900px;
 }
 
 /* --- 2. BODDERY AREA (Solid Left-to-Right) --- */
@@ -122,13 +123,22 @@ main {
 .event {
     position: relative;
     display: grid;
-    grid-template-areas: "stack"; 
-    height: 420px; 
-    border-radius: 24px;
+    grid-template-areas: "stack";
+    height: 420px;
+    border-radius: 28px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: #0a0618;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+    background: linear-gradient(145deg, #0e0920, #090514);
+    border: 1px solid rgba(169, 163, 255, 0.15);
+
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px rgba(255,255,255,0.03);
+
+    transition: 
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.6s ease,
+        border-color 0.6s ease;
 }
 
 /* Image Layer */
@@ -151,79 +161,94 @@ main {
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Initial center alignment */
-    align-items: center;
-    text-align: center;
-    background: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.4) 100%);
-    transition: all 0.6s ease;
+    justify-content: flex-end;
+    text-align: left;
+
+    background: linear-gradient(
+        to top,
+        rgba(5,4,14,0.95) 0%,
+        rgba(5,4,14,0.6) 40%,
+        transparent 100%
+    );
+
     opacity: 0;
-    height: inherit;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
 }
 
 .event-name {
     grid-area: stack;
     position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-    font-size: 1.5em;
-    padding: 40px 30px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, transparent 100%);
-    height: fit-content;
-    opacity: 1;
-    transition: all 0.2s ease;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    padding: 30px;
+    height: 100%;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(5,4,14,0.6) 0%,
+        rgba(5,4,14,0.4) 40%,
+        rgba(5,4,14,0.8) 100%
+    );
+
+    transition: all 0.4s ease;
 }
 
 /* Hover Effects */
 .event:hover {
-    transform: translateY(-15px);
+    transform: translateY(-18px) scale(1.02);
     border-color: rgba(169, 163, 255, 0.6);
+
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(196, 196, 219, 0.25);
 }
 
 
 .event:hover .cover img {
-    opacity: 0.35;
-    filter: blur(12px) brightness(0.7);
-    transform: scale(1.05);
+    opacity: 1;
+    filter: brightness(0.25);
+    transform: scale(1.12);
 }
 
 .event:hover .rest {
-    /*justify-content: flex-end;*/
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 70%);
     opacity: 1;
+    transform: translateY(0);
 }
 
 .event:hover .event-name {
     opacity: 0;
-    transform: translateY(-30%);
+    transform: scale(0.95);
 }
 
 .head {
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 12px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
 .time {
-    font-size: 0.85rem;
-    color: #A9A3ff;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border: 1px solid rgba(169, 163, 255, 0.4);
-    padding: 4px 14px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    backdrop-filter: blur(6px);
+    background-color: #5c4d4d88;
 }
 
 .body {
     font-size: 0.95rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.7);
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    line-height: 1.7;
+    padding-top: 10px;
+    color: #997fcf;
 }
 
 /* --- 4. ANIMATIONS --- */
@@ -239,4 +264,11 @@ footer {
     text-align: center;
     color: white;
     border-top: 1px solid #1a1033;
+}
+
+
+.event-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }

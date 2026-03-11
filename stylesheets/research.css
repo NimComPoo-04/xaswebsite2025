@@ -4,8 +4,7 @@ html {
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+    font-variation-settings: "wdth" 100;
 }
 
 * {
@@ -20,11 +19,11 @@ body {
     font-family: 'Roxbrough CF', serif;
 }
 
+/* MAIN CONTENT AREA */
 .boddery {
     padding-inline: 10%;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    /* Exact same radial glow as Events page */
+    padding-top: 40px;
+    padding-bottom: 70px;
     background: radial-gradient(circle at top, #1a1033 0%, #05040e 75%);
 }
 
@@ -35,14 +34,14 @@ main {
 }
 
 h1 {
-margin: 0px;
-padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
-
+/* HERO HEADER */
 header {
-    padding-top: 100px;
-    padding-bottom: 100px; /* Same spacing as Events */
+    padding-top: 80px;
+    padding-bottom: 70px;
     text-align: left;
 }
 
@@ -57,15 +56,16 @@ header p {
     font-family: 'Latin Modern', sans-serif;
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-top: 10px;
+    margin-top: 8px;
     color: #A9A3ff;
     max-width: 900px;
 }
 
 .liner {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
+/* FOOTER */
 footer {
     margin: 0px;
     font-size: 1.1em;
@@ -75,24 +75,24 @@ footer {
     text-align: center;
 }
 
-
+/* HEADINGS */
 .heading-1, .heading-2 {
-  position: relative;        
-  z-index: 1;               
-  color: white;         
+  position: relative;
+  z-index: 1;
+  color: white;
   text-align: center;
-  margin-bottom: 0;       
+  margin-bottom: 0;
   font-size: 45px;
 }
 
 .heading-2 {
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .heading-1::after, .heading-2::after {
   content: "";
   display: block;
-  margin: 10px auto 0;
+  margin: 8px auto 0;
   width: 300px;
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
@@ -101,9 +101,10 @@ footer {
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
 }
 
+/* PAPERS */
 .papers {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
     color: white;
 }
 
@@ -114,73 +115,63 @@ footer {
 }
 
 .paper-abstract {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: normal;
     text-align: justify;
+    margin-bottom: 25px;
 }
 
+/* FIGURE */
 figure {
   display: block;
   margin: 0 auto;
   text-align: center;
-}@import url('/stylesheets/common.css');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    background-color: #05040e;
-    color: white;
-    font-family: 'Roxbrough CF', serif;
-}
+/* HERO BACKGROUND */
 
 .hero-back {
     position: relative;
     overflow: hidden;
-    /* min-height: 60vh; */
-    
-    /* MUST BE FLEX TO PUSH TEXT DOWN */
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    
     background: #05040e;
 }
 
 .hero-back::before {
     content: "";
     position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    
-    /* Put your image here */
+
     background: url('../images/sky.png');
     background-size: cover;
     background-position: center;
-    
-    /* The animation */
+
     animation: slowZoom 20s ease-in-out infinite;
-    z-index: 1; /* Sits behind the content */
+    z-index: 1;
 }
 
-/* This creates the dark vignette over the moving image */
 .hero-back::after {
     content: "";
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, 
-                rgba(5, 4, 14, 0.5) 0%, 
-                transparent 50%, 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+
+    background: linear-gradient(to bottom,
+                rgba(5, 4, 14, 0.5) 0%,
+                transparent 50%,
                 rgba(5, 4, 14, 1) 100%);
-    z-index: 2; /* Sits between the image and the text */
+    z-index: 2;
 }
+
 header {
-    margin-top: 13rem;
-    padding: 0 10% 60px;
+    margin-top: 11rem;
+    padding: 0 10% 40px;
     position: relative;
     z-index: 3;
 }
@@ -193,31 +184,33 @@ header h1 {
     text-transform: uppercase;
 }
 
-/* --- 2. CONTENT AREA (Solid L-to-R Gradient) --- */
+/* CONTENT AREA */
 .boddery {
     background: linear-gradient(to right, #05040e 0%, #1a1033 100%);
-    padding: 100px 10%;
+    padding: 70px 10%;
     border-top: 1px solid rgba(169, 163, 255, 0.1);
 }
+
+/* SECTION TITLE */
 
 .section-title {
     font-size: 2.5rem;
     color: #A9A3ff;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     text-transform: uppercase;
     border-bottom: 1px solid rgba(169, 163, 255, 0.2);
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }
 
-/* --- 3. PAPER ENTRIES --- */
+/* PAPER ENTRY */
 .paper-entry {
-    margin-bottom: 120px;
+    margin-bottom: 60px;
 }
 
 .paper-heading {
     font-size: 2rem;
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     line-height: 1.3;
 }
 
@@ -225,22 +218,23 @@ header h1 {
     font-family: 'Latin Modern', serif;
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.8);
-    line-height: 1.8;
+    line-height: 1.7;
     text-align: justify;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     font-weight: normal;
 }
 
+/* IMAGE BOX */
 figure {
     width: 100%;
     background: rgba(255, 255, 255, 0.03);
-    padding: 50px;
+    padding: 30px;
     border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 figure img {
-    max-width: 90%; /* Larger photo space */
+    max-width: 90%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -253,30 +247,28 @@ figure:hover img {
 }
 
 figcaption {
-    margin-top: 30px;
-    font-size: 1rem;
+    margin-top: 15px;
+    font-size: 18px;
     color: #A9A3ff;
     text-align: center;
     font-family: 'Latin Modern', serif;
 }
 
-/* --- 4. ANIMATION & FOOTER --- */
+/* ANIMATION */
+
 @keyframes slowZoom {
     0% { transform: scale(1); }
     50% { transform: scale(1.08); }
     100% { transform: scale(1); }
 }
 
+/* FOOTER */
+
 footer {
-    padding-block: 4em;
+    padding-block: 3em;
     background: #000;
     text-align: center;
     border-top: 1px solid #1a1033;
-}
-
-figcaption {
-    margin-top: 10px;
-    font-size: 20px;
 }
 
 figure img {
@@ -289,10 +281,12 @@ footer p {
   letter-spacing: 2px;
 }
 
+/* MOBILE */
+
 @media (max-width: 900px) {
     header p {
         font-size: 20px;
         text-align: justify !important;
-        margin-top: 70px !important;
+        margin-top: 40px !important;
     }
 }

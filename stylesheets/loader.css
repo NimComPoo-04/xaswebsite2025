@@ -42,7 +42,8 @@
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-color: black;
+	background-color: #05040e;
+	background-image: linear-gradient(to top, #05040e 0%, #1a1033 100%);
 	font-size: larger;
 
 	transition: opacity ease-out 0.8s;

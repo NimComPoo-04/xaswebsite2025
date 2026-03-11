@@ -19,7 +19,7 @@ body {
         url('../images/sky.png');
     background-size: cover;
     background-position: center;
-    /*min-height: 60vh;*/
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -28,7 +28,7 @@ body {
 }
 
 header {
-    margin-top: 11rem; 
+    margin-top: auto;
     padding: 0 10% 60px;
 }
 
@@ -41,9 +41,11 @@ header h1 {
 
 header p {
     font-family: 'Latin Modern', sans-serif;
-    color: rgba(255,255,255,0.7);
-    max-width: 800px;
+    font-size: 1.1rem;
     line-height: 1.6;
+    margin-top: 10px;
+    color: #A9A3ff;
+    max-width: 900px;
 }
 
 .boddery {

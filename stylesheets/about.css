@@ -78,9 +78,12 @@ header h1 {
 }
 
 header p {
-    max-width: 60ch;
-    font-size: 1.2rem;
+    font-family: 'Latin Modern', sans-serif;
+    font-size: 1.1rem;
     line-height: 1.6;
+    margin-top: 10px;
+    color: #A9A3ff;
+    max-width: 900px;
 }
 
 /* --- 2. CONTENT AREA --- */
