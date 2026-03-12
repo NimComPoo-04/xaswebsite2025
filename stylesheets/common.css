@@ -149,95 +149,45 @@
   }
 }
 
-footer {
+.main-footer {
+    background-color: #0c0816; /* Pure black for that seamless look */
+    color: #ffffff;
+    padding: 15px 0;
     width: 100%;
-    /* Set a deep background that matches your theme */
-    background: rgba(5, 4, 14, 0.95); 
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    
-    border-top: 1px solid rgba(169, 163, 255, 0.2); 
-
-    padding: 60px 0 30px;
-    padding-bottom: 10px;
-    margin-top: 60px; 
-    
-    color: white;
-    box-sizing: border-box;
+    border-top: 1px solid #1a1a1a; /* Very subtle line instead of a box */
     position: relative;
     z-index: 10;
 }
 
-.footer-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+.footer-content {
+    max-width: 100%;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer-section {
-    flex: 1;
+.footer-middle p {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.footer-left, .footer-right {
     display: flex;
     align-items: center;
 }
 
-.footer-section.left { justify-content: flex-start; }
-.footer-section.middle { justify-content: center; }
-.footer-section.right { justify-content: flex-end; }
-
-.footer-brand {
-    font-family: 'Roxbrough CF', serif;
-    font-size: 32px;
-    letter-spacing: 8px;
-    color: white;
-    font-weight: bold;
-    /* Adding a subtle purple glow to XAS */
-    text-shadow: 0 0 15px rgba(169, 163, 255, 0.4);
+.footer-left svg, .footer-right svg {
+    stroke: #ffffff;
+    opacity: 0.8;
+    transition: opacity 0.3s;
 }
 
-.footer-icon-link {
-    color: rgba(255, 255, 255, 0.6);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: flex;
-}
-
-.footer-icon-link svg {
-    width: 26px;
-    height: 26px;
-}
-
-.footer-icon-link:hover {
-    color: #A9A3ff; /* Glows your signature purple on hover */
-    transform: scale(1.2) translateY(-3px);
-    filter: drop-shadow(0 0 10px rgba(169, 163, 255, 0.8));
-}
-
-.copyright {
-    text-align: center;
-    font-family: 'Latin Modern', serif;
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.3);
-    margin-top: 40px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-@media (max-width: 800px) {
-    footer {
-        margin-top: 40px; /* Even tighter on mobile */
-        padding: 40px 0 20px;
-    }
-
-    .footer-container {
-        width: 92%;
-    }
-
-    .footer-brand {
-        font-size: 24px;
-        letter-spacing: 4px;
-    }
+.footer-left svg:hover, .footer-right svg:hover {
+    opacity: 1;
 }
 
 html {

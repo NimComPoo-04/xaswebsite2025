@@ -65,15 +65,6 @@ header p {
     margin-bottom: 15px;
 }
 
-/* FOOTER */
-footer {
-    margin: 0px;
-    font-size: 1.1em;
-    padding-block: 1em;
-    padding-inline: 1em;
-    background: black;
-    text-align: center;
-}
 
 /* HEADINGS */
 .heading-1, .heading-2 {
@@ -262,24 +253,6 @@ figcaption {
     100% { transform: scale(1); }
 }
 
-/* FOOTER */
-
-footer {
-    padding-block: 3em;
-    background: #000;
-    text-align: center;
-    border-top: 1px solid #1a1033;
-}
-
-figure img {
-    width: 45vw;
-}
-
-footer p {
-  text-align: center;
-  font-size: 17px;
-  letter-spacing: 2px;
-}
 
 /* MOBILE */
 

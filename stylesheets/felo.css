@@ -215,11 +215,3 @@ figcaption {
 		transform: scale(1);
 	}
 }
-
-footer {
-	padding-block: 1em;
-	background: #000;
-	text-align: center;
-	color: white;
-	border-top: 1px solid #1a1033;
-}
